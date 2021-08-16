@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+  <link rel="stylesheet" href="assets/css/fonts.css">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>فرم ورود و ثبت نام</title>
+</head>
+
+<body class="d-flex min-vh-100 flex-column">
+  <!--======= ↓ Start Main ↓ =======-->
+  <main class="d-flex justify-content-center align-items-center flex-grow-1">
+    <div class="container">
+      <div class="row m-3">
+        <section class="card form__box col-12 p-3">
+          <div class="row container-panel position-relative my-0 my-xl-5">
+            <div class="right-panel col-lg-6 col-12 d-flex flex-column align-items-center justify-content-center">
+              <h3 class="mb-3">ورود به سایت</h3>
+              <span class="font-14">
+                هنوز ثبت نام نکردید؟
+                <a href="" id="register-btn">ثبت نام در سایت</a>
+              </span>
+              <form class="w-100 mt-2" id="form-login" novalidate>
+                <div class="form-group">
+                  <label for="email-login">آدرس ایمیل</label>
+                  <div class="position-relative my-2 d-flex">
+                    <input type="email" class="form-control input__style" id="email-login">
+                    <span class="input__icon envelope"></span>
+                  </div>
+                  <small class="error-text form-text"></small>
+                </div>
+                <div class="form-group">
+                  <label for="password-login">رمز عبور</label>
+                  <div class="position-relative my-2 d-flex">
+                    <input type="password" class="form-control input__style" id="password-login">
+                    <span class="input__icon password"></span>
+                    <a href="#" class="view__password"></a>
+                  </div>
+                  <small class="error-text form-text"></small>
+                </div>
+                <div class="form-group d-flex justify-content-between align-items-center flex-wrap">
+                  <label class="ui-checkbox font-14">
+                    <input type="checkbox" class="form-check-input">
+                    <span class="checkmark ml-2"></span>
+                    مرا به خاطر بسپار
+                  </label>
+                  <a href="#!" class="font-14" data-toggle="modal" data-target="#recoverModal">فراموشی رمز عبور</a>
+                </div>
+                <button type="submit"
+                  class="btn btn__style btn-block mx-auto d-flex align-items-center justify-content-center">ورود
+                  <span class="spinner-box">
+                    <span class="spinner-box__spin spinner-border spinner-border-sm position-absolute"></span>
+                    <i class="spinner-box__check fas fa-check position-absolute"></i>
+                  </span>
+                </button>
+              </form>
+              <span class="more-option position-relative w-100 text-center my-3">
+                یا ورود با
+              </span>
+              <ul class="other-ways d-flex pb-2">
+                <li class="other-ways__item mx-2">
+                  <a href="#" class="other-ways__link">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="other-ways__item mx-2">
+                  <a href="#" class="other-ways__link">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                </li>
+                <li class="other-ways__item mx-2">
+                  <a href="#" class="other-ways__link">
+                    <i class="fab fa-google"></i>
+                  </a>
+                </li>
+              </ul> <!-- end other-ways -->
+            </div> <!-- end right-panel -->
+
+            <div class="left-panel col-lg-6 col-12 d-flex flex-column align-items-center justify-content-center">
+              <h3 class="mb-3">ثبت نام در سایت</h3>
+              <span class="font-14">
+                قبلا ثبت نام کردید؟
+                <a href="" id="login-btn">ورود به سایت</a>
+              </span>
+              <form class="w-100 mt-2" id="form-register" novalidate>
+                <div class="form-row">
+                  <div class="form-group col-lg-6">
+                    <label for="username-register">نام کاربری</label>
+                    <div class="position-relative my-2 d-flex">
+                      <input type="email" class="form-control input__style" id="username-register">
+                      <span class="input__icon user"></span>
+                    </div>
+                    <small class="error-text form-text"></small>
+                  </div>
+                  <div class="form-group col-lg-6">
+                    <label for="phone-register">موبایل</label>
+                    <div class="position-relative my-2 d-flex">
+                      <input type="tel" class="form-control input__style" id="phone-register" maxlength="11">
+                      <span class="input__icon phone"></span>
+                    </div>
+                    <small class="error-text form-text"></small>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="email-register">آدرس ایمیل</label>
+                  <div class="position-relative my-2 d-flex">
+                    <input type="email" class="form-control input__style" id="email-register">
+                    <span class="input__icon envelope"></span>
+                  </div>
+                  <small class="error-text form-text"></small>
+                </div>
+                <div class="form-group">
+                  <label for="password-register">رمز عبور</label>
+                  <div class="position-relative my-2 d-flex">
+                    <input type="password" class="form-control input__style" id="password-register">
+                    <span class="input__icon password"></span>
+                    <a href="#" class="view__password"></a>
+                  </div>
+                  <small class="error-text form-text"></small>
+                </div>
+                <button type="submit"
+                  class="btn btn__style btn-block mx-auto d-flex align-items-center justify-content-center">ثبت نام
+                  <span class="spinner-box">
+                    <span class="spinner-box__spin spinner-border spinner-border-sm position-absolute"></span>
+                    <i class="spinner-box__check fas fa-check position-absolute"></i>
+                  </span>
+                </button>
+              </form>
+            </div> <!-- end left-panel -->
+
+            <div class="img-panel position-absolute d-none d-lg-block"></div>
+          </div> <!-- end row -->
+      </div> <!-- end row -->
+      </section>
+    </div> <!-- end container -->
+
+    <!-- ↓ Modal ↓ -->
+    <div class="modal fade" id="recoverModal" role="dialog">
+      <div class="modal-dialog modal-dialog-centered">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header p-2 px-3 flex-row-reverse align-items-center">
+            <button type="button" class="close ml-0 pl-0" data-dismiss="modal"><i
+                class="far fa-times-circle text-light"></i></button>
+            <h5 class="modal-title">بازیابی رمز عبور</h5>
+          </div>
+          <div class="modal-body">
+            <form class="w-100 mt-2" id="form-recover" novalidate>
+              <div class="form-group">
+                <label for="email-recover">آدرس ایمیل</label>
+                <div class="position-relative my-2 d-flex">
+                  <input type="email" class="form-control input__style" id="email-recover">
+                  <span class="input__icon envelope"></span>
+                </div>
+                <small class="error-text form-text"></small>
+              </div>
+              <button type="submit"
+                class="btn btn__style btn-block mx-auto d-flex align-items-center justify-content-center">ارسال رمز جدید
+                <span class="spinner-box">
+                  <span class="spinner-box__spin spinner-border spinner-border-sm position-absolute"></span>
+                  <i class="spinner-box__check fas fa-check position-absolute"></i>
+                </span>
+              </button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!-- ↑ end Modal ↑ -->
+  </main>
+
+
+  <!--======== ↑ End Main ↑ ========-->
+  <script src="assets/js/jquery-3.6.0.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+
+</html>
